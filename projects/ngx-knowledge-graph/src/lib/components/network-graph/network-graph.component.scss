@@ -1,0 +1,95 @@
+.fehris-network-graph {
+    width: 98vw;
+    height: 70vh;
+    border: 1px solid #ccc;
+    overflow: scroll;
+  }
+  
+  text {
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    background: rgb(217, 234, 248);
+    font: 16px sans-serif;
+    font-weight: bold;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+  
+  .links line {
+    stroke: #999;
+    stroke-opacity: 0.6;
+  }
+  
+  .nodes circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+  }
+  
+  circle text {
+    color: #000;
+  }
+  
+  .node:hover circle {
+    fill: #000;
+  }
+  
+  .node:hover text {
+    display: inline;
+  }
+  
+  .loader {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+  svg#CategoryLegend {
+    position: absolute;
+    padding: 2px;
+    border: 2px;
+    pointer-events: none;
+  }
+  .invisible {
+    position: relative;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+  text.hover {
+    font-weight: bold;
+  }
+  line:hover {
+    stroke: #000;
+    stroke-opacity: 1;
+  }
+  line.pactive {
+    stroke: #000;
+    stroke-opacity: 1;
+  }
+  circle.pactive {
+    stroke: rgb(60, 20, 206);
+    stroke-width: 3;
+  }
+  line.gactive {
+    stroke-opacity: 1;
+  }
+  text.gactive {
+    font-weight: bold;
+    font-size: 25;
+  }
+  .inactive {
+    fill: #808080;
+    opacity: 0.4;
+  }
+  line.inactive {
+    stroke-opacity: 0.4;
+  }
+  

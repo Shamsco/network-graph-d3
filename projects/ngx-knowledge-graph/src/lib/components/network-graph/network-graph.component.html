@@ -1,0 +1,14 @@
+<div fxLayout="row" fxLayoutAlign="left" class="fehris-toolbar-network-graph">
+    <mat-slide-toggle [(ngModel)]="showCategories" (change)="showColorsOnNodes()" color="primary"
+      >Show Categories</mat-slide-toggle
+    >
+    <mat-slide-toggle [(ngModel)]="showLinkStrength" (change)="toggleLinkStrength()" color="primary">Show Link Strength</mat-slide-toggle>
+    <p title="Zoom">
+      <input id='zoom' title="Zoom">
+      <mat-icon title="Zoom">zoom_in</mat-icon>
+    </p>
+    </div>
+  <div  class="fehris-network-graph">
+    <svg #networkSVG></svg>
+    <div *ngIf="loading" class="loader">Loading</div>
+  </div>
