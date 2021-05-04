@@ -16,8 +16,9 @@ import { createCategoryLegend, setStyle } from '../../shared/legend';
 import { createLinkWidthScale } from '../../shared/linkScale';
 import { KnowledgeGraph } from '../../models/KnowledgeGraph';
 import { Category } from '../../models/Category';
+
 @Component({
-  selector: 'lib-network-graph',
+  selector: 'network-graph',
   templateUrl: './network-graph.component.html',
   styleUrls: ['./network-graph.component.scss']
 })
@@ -158,23 +159,23 @@ export class NetworkGraphComponent implements OnInit, AfterContentInit {
 
     this.graphNodes.call(this.drag(mainGraphSimulation));
 
-    this.graphNodes.on('click', (event: any, nodeData: Node) => {
-      d3.selectAll('circle:not(.legendNodes)').style('fill', '#3b3939');
-      d3.select(event.target).style('stroke', '#3f51b5').style('stroke-width', '5');
-      addTooltip(event, nodeData.id);
-      d3.selectAll(`circle.id${nodeData.id}`).style('fill', '#12d');
-    });
+    // this.graphNodes.on('click', (event: any, nodeData: Node) => {
+    //   d3.selectAll('circle:not(.legendNodes)').style('fill', '#3b3939');
+    //   d3.select(event.target).style('stroke', '#3f51b5').style('stroke-width', '5');
+    //   addTooltip(event, nodeData.id);
+    //   d3.selectAll(`circle.id${nodeData.id}`).style('fill', '#12d');
+    // });
 
     this.createNodeArcs(this.graphNodes, 'id');
-    createCategoryLegend(
-      svg,
-      this.allCategories,
-      'category',
-      this.legendState,
-      15,
-      this.legendFontSize,
-      this.legendTextBottomMargin,
-    );
+    // createCategoryLegend(
+    //   svg,
+    //   this.allCategories,
+    //   'category',
+    //   this.legendState,
+    //   15,
+    //   this.legendFontSize,
+    //   this.legendTextBottomMargin,
+    // );
 
     const addTooltip = (event: any, id: any) => {
       this.createPreview(id, nodes, links, height, width);
