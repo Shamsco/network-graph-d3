@@ -4,6 +4,8 @@ import { NetworkGraphComponent } from './network-graph.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   declarations: [
     NetworkGraphComponent
@@ -13,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatSlideToggleModule,
     FormsModule,
     MatIconModule,
+    FlexLayoutModule
   ],
   exports: [NetworkGraphComponent]
 })

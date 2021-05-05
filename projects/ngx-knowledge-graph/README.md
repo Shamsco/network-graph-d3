@@ -1,24 +1,19 @@
 # NgxKnowledgeGraph
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+This library uses D3 to generate knowledge graphs.
 
-## Code scaffolding
+## Github
 
-Run `ng generate component component-name --project ngx-knowledge-graph` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-knowledge-graph`.
-> Note: Don't forget to add `--project ngx-knowledge-graph` or else it will be added to the default project in your `angular.json` file. 
+https://github.com/Shamsco/network-graph-d3
 
-## Build
+### Force-directed graph
 
-Run `ng build ngx-knowledge-graph` to build the project. The build artifacts will be stored in the `dist/` directory.
+use the <network-graph> tag to create a force directed graph component.
 
-## Publishing
+#### Attributes
 
-After building your library with `ng build ngx-knowledge-graph`, go to the dist folder `cd dist/ngx-knowledge-graph` and run `npm publish`.
+data: the data you want the network graph to display.
 
-## Running unit tests
+example: <network-graph [data]="yourvariablename">
 
-Run `ng test ngx-knowledge-graph` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## In development

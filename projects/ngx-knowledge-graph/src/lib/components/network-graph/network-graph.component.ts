@@ -29,6 +29,10 @@ export class NetworkGraphComponent implements OnInit, AfterContentInit {
   @Input() showLinkStrength = true;
   loading = false;
   @Input() data!: KnowledgeGraph;
+  @Input() hasCategories: boolean = false;
+  @Input() hasLinkStrength: boolean = false;
+  @Input() height!: number;
+  @Input() width!: number;
   nodeRadius = 7;
   arcRadius = 10;
   allCategories!: Category[];
@@ -110,6 +114,13 @@ export class NetworkGraphComponent implements OnInit, AfterContentInit {
   }
 
   drawNetworkGraph(nodes: Node[], links: Link[], width: number, height: number): void {
+    console.log(links)
+    console.log(nodes)
+    
+    height = height * nodes.length/50;
+    width = width * nodes.length/50;
+
+
     this.linkWidthScale = createLinkWidthScale(links);
 
     const zoomSlider = d3.select('input#zoom');
