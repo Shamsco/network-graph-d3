@@ -1,0 +1,12 @@
+<div fxLayout="row" fxLayoutAlign="left" class="fehris-toolbar-arc-graph">
+    <button mat-button id="showCategories" title="Show Categories" (click)="showColorsOnNodes()" color="primary">
+      <mat-icon>donut_large</mat-icon>
+    </button>
+    <button mat-button id="toggleLinkStrength" title="Show Link Strength" (click)="toggleLinkStrength()" color="primary">
+      <mat-icon>show_chart</mat-icon>
+    </button>
+</div>
+<div class="fehris-arc-graph">
+<svg #arcSVG></svg>
+<div *ngIf="loading" class="loader">Loading</div>
+</div>

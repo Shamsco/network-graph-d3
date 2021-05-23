@@ -1,0 +1,89 @@
+.fehris-arc-graph {
+    width: 98vw;
+    height: 70vh;
+    border: 1px solid #ccc;
+    overflow: scroll;
+  }
+  
+  text {
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    background: rgb(217, 234, 248);
+    font: 16px sans-serif;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 8px;
+    pointer-events: none;
+    word-wrap: break-word;
+  }
+  
+  .links line {
+    stroke: #999;
+    stroke-opacity: 0.6;
+  }
+  
+  .nodes circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+  }
+  
+  circle text {
+    color: #000;
+  }
+  
+  .node:hover circle {
+    fill: #000;
+  }
+  
+  .node:hover text {
+    display: inline;
+  }
+  
+  .loader {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+  
+  .hover path {
+    stroke: #ccc;
+  }
+  
+  .hover text {
+    fill: #ccc;
+  }
+  
+  .hover g.primary text {
+    fill: black;
+    font-weight: bold;
+  }
+  
+  .hover g.secondary text {
+    fill: #333;
+  }
+  
+  .hover path.primary {
+    stroke: #333;
+    stroke-opacity: 1;
+  }
+  svg#ARC-CategoryLegend {
+    position: absolute;
+    padding: 2px;
+    border: 2px;
+    pointer-events: none;
+  }
+  .invisible {
+    position: relative;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+  
